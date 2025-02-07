@@ -2,32 +2,22 @@ using System;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Generate a magic number.
-        Random random = new Random();
-        int magicNum = random.Next(1, 11); // Generates a random number between 1 and 10
-        int guess = 0;
+        Fraction f1 = new Fraction();
+        Console.WriteLine(f1.GetFraction());
+        Console.WriteLine(f1.GetDecimal());
 
-        while (magicNum != guess)
-        {
-            // Ask user for a guess.
-            Console.Write("What is your guess? ");
-            guess = int.Parse(Console.ReadLine());
+        Fraction f2 = new Fraction(5);
+        Console.WriteLine(f2.GetFraction());
+        Console.WriteLine(f2.GetDecimal());
 
-            // If statement determining if it's too high, low, or is the correct guess.
-            if (magicNum == guess)
-            {
-                Console.WriteLine("You guessed it!");
-            }
-            else if (magicNum > guess)
-            {
-                Console.WriteLine("Higher");
-            }
-            else
-            {
-                Console.WriteLine("Lower");
-            }
-        }
+        Fraction f3 = new Fraction(3, 4);
+        Console.WriteLine(f3.GetFraction());
+        Console.WriteLine(f3.GetDecimal());
+
+        Fraction f4 = new Fraction(1, 3);
+        Console.WriteLine(f4.GetFraction());
+        Console.WriteLine(f4.GetDecimal());
     }
 }

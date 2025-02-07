@@ -1,9 +1,31 @@
-﻿namespace Sandbox2;
-
-class Program
+﻿class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello Sandbox World!");
+        // Generate a magic number.
+        Random random = new Random();
+        int magicNum = random.Next(1, 11); // Generates a random number between 1 and 10
+        int guess = 0;
+
+        while (magicNum != guess)
+        {
+            // Ask user for a guess.
+            Console.Write("What is your guess? ");
+            guess = int.Parse(Console.ReadLine());
+
+            // If statement determining if it's too high, low, or is the correct guess.
+            if (magicNum == guess)
+            {
+                Console.WriteLine("You guessed it!");
+            }
+            else if (magicNum > guess)
+            {
+                Console.WriteLine("Higher");
+            }
+            else
+            {
+                Console.WriteLine("Lower");
+            }
+        }
     }
 }
