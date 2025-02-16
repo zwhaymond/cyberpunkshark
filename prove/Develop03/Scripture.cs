@@ -1,40 +1,20 @@
 public class Scripture
 {
     private int userChoose;
-    private string selectedVerse;
-    private Reference referenceHelper = new(); // Instance of Reference
+    private Reference reference = new Reference();
 
-    public Scripture()
+    // Constructor for Scripture class with difficulty as parameter
+    public Scripture(int difficulty)
     {
-        while (true)
-        {
-            Console.WriteLine("Choose a difficulty: 1 = Easy, 2 = Medium, 3 = Hard");
+        userChoose = difficulty;
 
-            if (int.TryParse(Console.ReadLine(), out userChoose) && (userChoose >= 1 && userChoose <= 3))
-            {
-                break;
-            }
+        // Get verse and location from the Reference class
+        string location;
+        string verse = reference.GetVerse(userChoose, out location); // Correctly call GetVerse with out parameter
 
-            Console.WriteLine("Not a valid difficulty. Please try again.");
-        }
-
-        // Get the verse based on difficulty and store it
-        selectedVerse = referenceHelper.GetVerse(userChoose);
-
-        Console.WriteLine($"You selected difficulty level {userChoose}. Here is your verse:");
-        Console.WriteLine(selectedVerse);
-    }
-
-    // Method to return the selected verse so Word can use it
-    public string GetSelectedVerse()
-    {
-        return selectedVerse;
+        Console.WriteLine($"\n{location} {verse}"); // Display verse with location
     }
 }
-
-
-
-
 
 
 
