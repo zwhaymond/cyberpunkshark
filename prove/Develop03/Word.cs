@@ -20,7 +20,7 @@ public class Word
     if (wordList.All(word => word == "____"))
     {
         Console.WriteLine("All the words are hidden.");
-        return;
+        Environment.Exit(0);  // Exit the program
     }
 
     Random random = new();
@@ -36,6 +36,7 @@ public class Word
 
     Console.WriteLine(string.Join(" ", wordList));  // Print updated verse
     }
+
 
 }
 
