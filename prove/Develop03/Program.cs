@@ -19,7 +19,6 @@ class Program
 
     Word word = new(reference.GetVerse(difficulty, out string location), location);
 
-    // Removed the duplicate print statement here
     while (true)
     {
         Console.WriteLine("\nPress \"Enter\" to remove a word or type \"No\" to quit.");
