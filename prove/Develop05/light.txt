@@ -1,0 +1,5 @@
+Total Points Earned: 650
+
+Simple | wake up | wake up today at 8pm. | 50 points | Completed: False
+Eternity | wake up on time | wake up everyday at 8am. | 50 points | Completed: False
+Checklist | eat meals | eat three meals everyday. | 50 points | Completed: True | Target Completions: 3 | Bonus Points: 500
